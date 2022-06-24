@@ -6,7 +6,7 @@
 /*   By: emetras- <emetras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:39:22 by emetras-          #+#    #+#             */
-/*   Updated: 2022/06/14 18:20:53 by emetras-         ###   ########.fr       */
+/*   Updated: 2022/06/24 16:35:22 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,40 +185,152 @@ int main(void)
 
 	// teste strnstr
 
-	char name[25] = "aaabcabcd";
-	char src[10] = "aabc";
-	char *ptr;
+// 	char name[25] = "aaabcabcd";
+// 	char src[10] = "aabc";
+// 	char *ptr;
 	
-	printf("Phrase \'%s\' | word \'%s\' \n ",name, src);
-//primeiro teste
-	ptr = ft_strnstr(name, src, 10);
-	printf("my function - \"%s\"\n", ptr);
+// 	printf("Phrase \'%s\' | word \'%s\' \n ",name, src);
+// //primeiro teste
+// 	ptr = ft_strnstr(name, src, 10);
+// 	printf("my function - \"%s\"\n", ptr);
 	
-	ptr = strnstr(name, src, 10);
-	printf("original - \"%s\"\n\n", ptr);
+// 	ptr = strnstr(name, src, 10);
+// 	printf("original - \"%s\"\n\n", ptr);
 	
-//segundo teste
-	printf("Phrase \'%s\' | word \'de\' \n ",name);
-	ptr = ft_strnstr(name, "de", 15);
-	printf("my function - \"%s\"\n", ptr);
+// //segundo teste
+// 	printf("Phrase \'%s\' | word \'de\' \n ",name);
+// 	ptr = ft_strnstr(name, "de", 15);
+// 	printf("my function - \"%s\"\n", ptr);
 	
-	ptr = strnstr(name, "de", 15);
-	printf("Original function - \"%s\"\n\n", ptr);
+// 	ptr = strnstr(name, "de", 15);
+// 	printf("Original function - \"%s\"\n\n", ptr);
 	
-//terceiro teste
-	printf("Phrase \'%s\' | word \'\' \n ",name);
-	ptr = ft_strnstr(name, "", 15);
-	printf("my function - \"%s\"\n", ptr);
+// //terceiro teste
+// 	printf("Phrase \'%s\' | word \'\' \n ",name);
+// 	ptr = ft_strnstr(name, "", 15);
+// 	printf("my function - \"%s\"\n", ptr);
 	
-	ptr = strnstr(name, "", 15);
-	printf("Original function - \"%s\"\n\n", ptr);
+// 	ptr = strnstr(name, "", 15);
+// 	printf("Original function - \"%s\"\n\n", ptr);
 	
-//quarto teste
-	printf("Phrase \'%s\' | word \'aaabc\' \n ",name);
-	ptr = ft_strnstr(name, "aaabc", 5);
-	printf("my function - \"%s\"\n", ptr);
+// //quarto teste
+// 	printf("Phrase \'%s\' | word \'aaabc\' \n ",name);
+// 	ptr = ft_strnstr(name, "aaabc", 5);
+// 	printf("my function - \"%s\"\n", ptr);
 	
-	ptr = strnstr(name, "aaabc", 5);
-	printf("Original function - \"%s\"\n\n", ptr);
+// 	ptr = strnstr(name, "aaabc", 5);
+// 	printf("Original function - \"%s\"\n\n", ptr);
 
+	//atoi tester
+	// printf("\noriginal function\n");
+	// printf("%i\n", atoi(" -123junk"));
+    // printf("%i\n", atoi("1"));
+    // printf("%i\n", atoi("0"));
+    // printf("%i\n", atoi("-junk-123"));         // no conversion can be performed
+    // printf("%i\n", atoi("12321474836471"));
+	// printf("%i\n", atoi("2147483648"));
+	// printf("%i\n", atoi("48"));
+	// printf("%i\n", atoi("000000"));
+
+	// printf("\nmy function\n");
+	// printf("%i\n", ft_atoi(" -123junk"));
+    // printf("%i\n", ft_atoi("1"));
+    // printf("%i\n", ft_atoi("0"));
+    // printf("%i\n", ft_atoi("-junk-123"));         // no conversion can be performed
+    // printf("%i\n", ft_atoi("12321474836471"));
+	// printf("%i\n", ft_atoi("2147483648"));
+	// printf("%i\n", ft_atoi("48"));
+	// printf("%i\n", ft_atoi("000000"));
+
+
+	//teste substr
+
+	// char	frase[] = "	";
+	// char	frase2[] = "";
+	// char 	*ptr;
+	// ptr = ft_strjoin(frase, frase2);
+	// printf("\"%s\"\n", ptr);
+	// free(ptr);
+
+	//teste itoa
+	// int test = 12;
+	// char *ptr;
+
+	// ptr = ft_itoa(test);
+	// printf("\"%s\"\n", ptr);
+	// free (ptr);
+
+	// test = 0;
+	// ptr = ft_itoa(test);
+	// printf("\"%s\"\n", ptr);
+	// free (ptr);
+
+	// test = 2147483647;
+	// ptr = ft_itoa(test);
+	// printf("\"%s\"\n", ptr);
+	// free (ptr);
+
+	// test = -2147483648;
+	// ptr = ft_itoa(test);
+	// printf("\"%s\"\n", ptr);
+	// free (ptr);
+	//test putnbr
+
+	// int i = 0;
+	// ft_putnbr_fd(i, 1);
+	// i = -255;
+	// putchar('\n');
+	// ft_putnbr_fd(i, 1);
+	// i = 255;
+	// putchar('\n');
+	// ft_putnbr_fd(i, 1);
+	// putchar('\n');
+	// i = 2147483647;
+	// ft_putnbr_fd(i, 1);
+	// putchar('\n');
+	// i = -2147483648;
+	// ft_putnbr_fd(i, 1);
+	
+
+	// teste sizesTR
+
+	// char name [] = "aaaaaaaasuco de baaaatatat";  //26 +1
+	// char name2 [] = "la le li lu dominadora"; //22 +1
+	// char **split;
+	// int i=0;
+	
+	char * * tab = ft_split("  tripouille  42  ", ' ');
+	// split = ft_split("aaaaaaaasuco de baaaatatat", 'a');
+	// while(split[i])
+	// {
+		printf("\"%s\"", tab[2]);
+		free(tab[0]);
+		free(tab[1]);
+		free(tab);
+	// 	i++;
+	// }
+	// printf("resultado \"%s\"\n", split[i]);
+	// i = 0;
+	// free(split[0]);
+	// free(split[1]);
+	// free(split[2]);
+	// free(split[3]);
+	// free(split);
+	// split = ft_split("name2", 0);
+	// while(split[i])
+	// {
+	// 	printf("resultado \"%s\"\n", split[i]);
+	// 	i++;
+	// }
+	// printf("resultado \"%s\"\n", split[i]);
+	// free(split);
 }
+
+
+
+//exemplo
+/*
+	ft_strsplit("exemplo", "ex");
+	
+
+*/

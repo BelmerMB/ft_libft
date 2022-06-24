@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emetras- <emetras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 18:13:38 by emetras-          #+#    #+#             */
-/*   Updated: 2022/06/16 22:38:22 by emetras-         ###   ########.fr       */
+/*   Created: 2022/06/20 16:28:56 by emetras-          #+#    #+#             */
+/*   Updated: 2022/06/20 17:11:30 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	void	*ptr;
-	size_t	max;
+	char	*numb;
 
-	max = nmemb * size;
-	if (nmemb <= 0 || size <= 0 || ((max / size) != nmemb))
-		return (NULL);
-	ptr = malloc(max);
-	if (ptr == NULL)
-		return (NULL);
-	return (ft_memset(ptr, 0, max));
+	
+	ft_putstr_fd(numb, fd);
+	
 }
