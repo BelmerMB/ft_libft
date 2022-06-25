@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emetras- <emetras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/06 17:08:32 by emetras-          #+#    #+#             */
-/*   Updated: 2022/06/25 19:55:11 by emetras-         ###   ########.fr       */
+/*   Created: 2022/06/24 18:59:47 by emetras-          #+#    #+#             */
+/*   Updated: 2022/06/25 18:19:29 by emetras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned char	*str;
-	size_t			i;
+	size_t	index;
+	char	*str;
 
-	i = 0;
-	str = (unsigned char *)s;
-	if (n == 0)
+	index = 0;
+	if (!s)
 		return (NULL);
-	while (i < n)
+	str = (char *) ft_calloc((ft_strlen(s)) + 1, sizeof(char));
+	while (s[index])
 	{
-		if (str[i] == (unsigned char)c)
-			return ((void *)&str[i]);
-		i++;
+		str[index] = f(index, s[index]);
+		index++;
 	}
-	return (NULL);
+	str[index] = '\0';
+	return (str);
 }
